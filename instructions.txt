@@ -1,0 +1,56 @@
+Instructions
+AuctionBase
+
+In this project, we are developing an online e-commerce website (similar to eBay). You are implementing a version of AuctionBase (which is based on an assignment from the University of Wisconsin).
+
+User registers to the website (using a username, email, name, address, and phone number. ) Each user is identified by a unique id.
+A user can be a buyer or a seller (or both).
+Auction runs only on a single item.
+A seller places items for Auction.
+The item is identified by an ID and has a name and may belong to multiple categories, a location (which may be different from the seller location), and descriptions.
+For each category, we keep track of its id, name, and description.
+Auctions would have a start time, end time, and a starting asking price.
+A buyer can bid on items, the bid with the highest bid win the auction.
+A buyer may review the seller (a rating from 1 to 5) and write feedback.
+The seller specifies the shipping options that may include pickup, each shipping option has a price and time.
+The seller provides her bank information (bank name, routing number, and account no).
+The system stores the payment information for credit card information (card number, expiration date, CCV code, name, and billing address).
+The winner bidder specifies her choice of shipping method and has to pay for the price of bid and shipping cost.
+The status of the buyer payment is recorded, upon the successful payment, the seller must ship the order within two business days.
+The tracking information (of shipment) is recorded, if applicable. The buyer confirms the delivery of the item. The payment is released to the seller after delivery is confirmed.
+Each bid must be higher than the previous one.
+For each auction, we store the number of bids and the last price (this information is stored for performance).
+To simulate the execution of the system, we create a table for the current time.
+This table should at all times contain a single row (i.e., a single value) representing the current time of your AuctionBase system.
+
+Constraints for Users
+
+No two users can share the same User ID.
+All sellers and bidders must already exist as users.
+The bidder must have a valid credit card.
+Constraints for Items
+
+No two items can share the same Item ID.
+Every bid must correspond to an actual item.
+An item cannot belong to a particular category more than once.
+The end time for an auction must always be after its start time.
+The Current Price of an item must always match the Amount of the most recent bid for that item.
+Constraints for Bidding
+
+A user may not bid on an item he or she is also selling.
+No auction may have two bids at the exact same time.
+No auction may have a bid before its start time or after its end time.
+No user can make a bid of the same amount to the same item more than once.
+In every auction, the Number of Bids attribute corresponds to the actual number of bids for that particular item.
+Any new bid for a particular item must have a higher amount than any of the previous bids for that particular item.
+Constraints for Time
+
+All new bids must be placed at the time which matches the current time of your AuctionBase system.
+The current time of your AuctionBase system can only advance forward in time, not backward in time.
+Deliverable
+
+Design EERD schema for the system.
+Create the Relation model in SQL
+Design your constraints: Create a file called constraints.txt in this file, you will specify, in plain English, how you implemented each of the 16 constraints in your database schema, if possible.
+Implement your constraints. (Trigger or otherwise).
+Import EBay data into your database (bonus)
