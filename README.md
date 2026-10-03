@@ -2,6 +2,8 @@
 
 AuctionBase is a relational database management system designed to support an online auction platform. The project models the core operational data required to handle user accounts, item listings, competitive bidding, and final transaction settlement.
 
+<img src="./Auctionbase%20diagram.png" width="550" height="750">
+
 ## System Architecture
 
 The database schema is structured around four primary entities that capture the complete lifecycle of an online auction:
